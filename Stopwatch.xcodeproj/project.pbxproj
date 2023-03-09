@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4819FF2329AE39220037471B /* StopwatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4819FF2229AE39220037471B /* StopwatchApp.swift */; };
-		4819FF2529AE39220037471B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4819FF2429AE39220037471B /* ContentView.swift */; };
+		4819FF2529AE39220037471B /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4819FF2429AE39220037471B /* StopWatchView.swift */; };
 		4819FF2729AE39230037471B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4819FF2629AE39230037471B /* Assets.xcassets */; };
 		4819FF2A29AE39230037471B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4819FF2929AE39230037471B /* Preview Assets.xcassets */; };
+		481EB41129B9DAB100C38D14 /* StopWatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EB41029B9DAB100C38D14 /* StopWatchModel.swift */; };
+		481EB41429B9EAEC00C38D14 /* StopWatchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EB41329B9EAEC00C38D14 /* StopWatchButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4819FF1F29AE39220037471B /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4819FF2229AE39220037471B /* StopwatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchApp.swift; sourceTree = "<group>"; };
-		4819FF2429AE39220037471B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4819FF2429AE39220037471B /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
 		4819FF2629AE39230037471B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4819FF2929AE39230037471B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		481EB41029B9DAB100C38D14 /* StopWatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchModel.swift; sourceTree = "<group>"; };
+		481EB41229B9E89A00C38D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		481EB41329B9EAEC00C38D14 /* StopWatchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		4819FF2129AE39220037471B /* Stopwatch */ = {
 			isa = PBXGroup;
 			children = (
+				481EB41229B9E89A00C38D14 /* Info.plist */,
 				4819FF2229AE39220037471B /* StopwatchApp.swift */,
-				4819FF2429AE39220037471B /* ContentView.swift */,
+				481EB40E29B9D95300C38D14 /* ViewModels */,
+				481EB40F29B9D96200C38D14 /* Models */,
+				481EB40D29B9D94900C38D14 /* Views */,
 				4819FF2629AE39230037471B /* Assets.xcassets */,
 				4819FF2829AE39230037471B /* Preview Content */,
 			);
@@ -65,6 +73,30 @@
 				4819FF2929AE39230037471B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		481EB40D29B9D94900C38D14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4819FF2429AE39220037471B /* StopWatchView.swift */,
+				481EB41329B9EAEC00C38D14 /* StopWatchButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		481EB40E29B9D95300C38D14 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		481EB40F29B9D96200C38D14 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				481EB41029B9DAB100C38D14 /* StopWatchModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4819FF2529AE39220037471B /* ContentView.swift in Sources */,
+				4819FF2529AE39220037471B /* StopWatchView.swift in Sources */,
 				4819FF2329AE39220037471B /* StopwatchApp.swift in Sources */,
+				481EB41429B9EAEC00C38D14 /* StopWatchButtonView.swift in Sources */,
+				481EB41129B9DAB100C38D14 /* StopWatchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +304,7 @@
 				DEVELOPMENT_TEAM = LXSSTNCP9V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Stopwatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +333,7 @@
 				DEVELOPMENT_TEAM = LXSSTNCP9V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Stopwatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
